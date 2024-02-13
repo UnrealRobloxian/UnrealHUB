@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Unreal HUB | Gen v1", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Unreal HUB | Gen v1", HidePremium = false, IntroText = "Unreal HUB", SaveConfig = true, ConfigFolder = "OrionTest"})
 
 local Tab = Window:MakeTab({
 	Name = "Farm",
@@ -12,12 +12,12 @@ local Section = Tab:AddSection({
 	Name = "Auto Farm"
 })
 
-Tab:AddColorpicker({
-	Name = "Colorpicker",
-	Default = Color3.fromRGB(255, 0, 0),
+Tab:AddToggle({
+	Name = "Auto Farm Level",
+	Default = false,
 	Callback = function(Value)
 		print(Value)
-	end	  
+	end    
 })
 
 ColorPicker:Set(Color3.fromRGB(255,255,255))
