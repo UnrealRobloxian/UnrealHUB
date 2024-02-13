@@ -1,14 +1,20 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = Library.CreateLib("Unreal HUB: Blox Fruits | Gen v1", "Synapse")
+local Window = OrionLib:MakeWindow({Name = "Unreal HUB:Blox Fruits | Gen v1", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
-local Misc = Window:NewTab("Misc")
-local MiscSection = Misc:NewSection("Misc 🕳️")
+local Tab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
 
-MiscSection:NewToggle("Speed", "ToggleInfo", function(state)
-    if state then
-        print("Toggle On")
-    else
-        print("Toggle Off")
-    end
-end)
+local Section = Tab:AddSection({
+	Name = "Misc"
+})
+
+Tab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+      		print("Succesffuly!")
+  	end    
+})
