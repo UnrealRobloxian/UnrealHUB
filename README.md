@@ -1,20 +1,23 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Unreal HUB:Blox Fruits | Gen v1", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Unreal HUB | Gen v1", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 local Tab = Window:MakeTab({
-	Name = "Misc",
+	Name = "Farm",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 local Section = Tab:AddSection({
-	Name = "Misc"
+	Name = "Auto Farm"
 })
 
-Tab:AddButton({
-	Name = "Infinite Yield",
-	Callback = function()
-      		print("Succesffuly!")
-  	end    
+Tab:AddColorpicker({
+	Name = "Colorpicker",
+	Default = Color3.fromRGB(255, 0, 0),
+	Callback = function(Value)
+		print(Value)
+	end	  
 })
+
+ColorPicker:Set(Color3.fromRGB(255,255,255))
