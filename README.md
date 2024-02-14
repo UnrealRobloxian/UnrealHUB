@@ -17,7 +17,5 @@ Tab:AddToggle({
 	Default = false,
 	Callback = function(Value)
 		print(Value)
-	end    
+	end
 })
-
-ColorPicker:Set(Color3.fromRGB(255,255,255))
